@@ -1,0 +1,24 @@
+// Simple button style.
+// ====================
+// Usage: @include bbb_simple_style($background-color, $color)
+
+@mixin bbb_simple_style ($background-color: #eee, $color: #333) {
+
+  @include bbb_common_styling();
+
+  color: $color;
+  border: 1px solid darken($background-color, 10%);
+  box-shadow: inset 0px 1px 2px 0px rgba(255,255,255,0.5);
+  @include background(linear-gradient(lighten($background-color, 10%),$background-color ) center no-repeat) ;
+
+  @include transition(all, 0.1s);
+
+  &:hover:not(:disabled) {
+    box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.3);
+  }
+
+  &:active:not(:disabled) {
+    @include background(linear-gradient(darken($background-color, 15%),$background-color ) center no-repeat) ;
+    box-shadow: inset 0px 2px 5px 1px rgba(0,0,0,0.3);
+  }
+}

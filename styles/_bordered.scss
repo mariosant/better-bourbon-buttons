@@ -1,0 +1,21 @@
+// Bordered button style.
+// ====================
+// Usage: @include bbb_bordered_style($border-color, $color)
+
+@mixin bbb_bordered_style ($border-color: #333, $color: #333) {
+
+  @include bbb_common_styling();
+
+  color: $color;
+  border: 2px solid $border-color;
+  background: none;
+
+  @include transition(all, 0.1s);
+
+  &:hover:not(:disabled) {
+  }
+
+  &:active:not(:disabled) {
+    box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.3);
+  }
+}

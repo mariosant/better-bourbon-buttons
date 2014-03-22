@@ -1,0 +1,21 @@
+// Flat button style.
+// ====================
+// Usage: @include bbb_flat_style($background-color, $color)
+
+@mixin bbb_flat_style ($background-color: #eee, $color: #333) {
+
+  @include bbb_common_styling();
+
+  color: $color;
+  background: $background-color;
+
+  @include transition(all, 0.1s);
+
+  &:hover:not(:disabled) {
+    background: darken($background-color, 5%);
+  }
+
+  &:active:not(:disabled) {
+    box-shadow: inset 0px 2px 5px 1px rgba(0,0,0,0.3);
+  }
+}

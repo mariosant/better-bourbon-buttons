@@ -1,0 +1,25 @@
+// 3D button style.
+// ====================
+// Usage: @include bbb_3D_style($background-color, $color, $shadow-size)
+
+@mixin bbb_3D_style ($background-color: #eee, $color: #333, $shadow-size: 4px) {
+
+  @include bbb_common_styling();
+
+  @include position(relative, 0px 0 0 0); // I use measurement unit for top, in order for animation to work
+
+  color: $color;
+  background: $background-color;
+
+  box-shadow: 0 $shadow-size darken($background-color, 15%);
+
+  @include transition(all, 0.1s);
+
+  &:hover:not(:disabled) {
+  }
+
+  &:active:not(:disabled) {
+    box-shadow: 0 0px shade($background-color, 15%);
+    top: $shadow-size;
+  }
+}
