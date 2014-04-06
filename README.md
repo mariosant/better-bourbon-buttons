@@ -13,7 +13,7 @@ Include the mixins into your SCSS declarations.
         @include bbb_flat_style(#e310eb, white); // Ooooh flat style OTB!
         @include bbb_size(2); // I would like it bigger than usual please
     }
-    
+
 ### Available styles
 
 This is a list with the available mixin styles and their usage.
@@ -24,8 +24,9 @@ This is a list with the available mixin styles and their usage.
 * Simple Style: `@include bbb_simple_style($background-color, $color);`
 
 You can also change the size of the button with the size mixin. It is not obligatory, but it is a very easy way to set button size.
-    
-    @include bbb_size($integer_multiplier);
+
+    @include bbb_size(1);  # you can use multipliers to define size
+    @include bbb_size(10px);  # or pass the size you want with units
 
 ### Expandability / Alternative styles
 
@@ -36,10 +37,9 @@ Lets create a pill button.
     button.pill {
       @include bbb_simple_style();
       @include bbb_size();
-      
       border-radius: 100px;
     }
-    
+
 Installation
 ------------
 
