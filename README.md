@@ -3,6 +3,13 @@ Better Bourbon Buttons
 
 Better button mixins for [Bourbon scss framework].
 
+Demo
+----
+
+For a look at how everything looks, [check out this page] with code samples and rendered buttons.
+
+[check out this page]: http://mariosant.github.io/bbb-website/
+
 Usage
 -----
 
